@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class RegistroAcciones {
+    
+    // Lista para almacenar las acciones
+    private List<String> acciones;
+    
+    // Constructor para inicializar la lista
+    public RegistroAcciones() {
+        acciones = new ArrayList<>();
+    }
+    
+    // Método para registrar una acción
+    public void registrarAccion(String accion) {
+        acciones.add(accion);
+    }
+    
+    // Método para mostrar todas las acciones registradas
+    public void mostrarAcciones() {
+        System.out.println("Acciones registradas:");
+        for (String accion : acciones) {
+            System.out.println(accion);
+        }
+    }
+    
+    public static void main(String[] args) {
+        // Crear un objeto de RegistroAcciones
+        RegistroAcciones registro = new RegistroAcciones();
+        
+        // Registrar algunas acciones
+        registro.registrarAccion("Acción 1: Iniciar aplicación");
+        registro.registrarAccion("Acción 2: Cargar datos");
+        registro.registrarAccion("Acción 3: Procesar datos");
+        registro.registrarAccion("Acción 4: Finalizar aplicación");
+        
+        // Mostrar todas las acciones registradas
+        registro.mostrarAcciones();
+    }
+}
